@@ -1,0 +1,105 @@
+﻿@model WebApplication1.Models.Medico
+
+@{
+    ViewBag.Title = "Excluir";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Medico</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.crm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.crm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.endereco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.endereco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bairro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bairro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.atende_por_convenio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.atende_por_convenio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tem_clinica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tem_clinica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.web_site_blog)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.web_site_blog)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cidade.cidade1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cidade.cidade1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Especialidade.especialidade1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Especialidade.especialidade1)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

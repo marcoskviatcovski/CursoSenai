@@ -1,0 +1,45 @@
+﻿@model IEnumerable<WebApplication1.Models.Estado>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.estado1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sigla)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pais.pais1)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.estado1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sigla)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pais.pais1)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_estado }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_estado }) |
+            @Html.ActionLink("Excluir", "Excluir", new { id=item.id_estado })
+        </td>
+    </tr>
+}
+
+</table>
